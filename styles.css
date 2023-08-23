@@ -1,0 +1,248 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #014966, #feffd0 ); /* Gradiente de roxo para amarelo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner {
+  background-image: url('pedi.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0; /* Ajuste o espaçamento conforme necessário */
+  color: white; /* Cor do texto */
+  font-family: Arial, sans-serif;
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos dos brownies */
+/* Estilos do contêiner dos brownies */
+.brownies-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 brownies por fileira */
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #0004ff, #fdb25d);
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.brownie {
+  border: 1px solid #000000;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 251, 194);
+  text-align: center;
+}
+
+.brownie img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff8800;
+}
+
+/* Estilo mais bonito para o botão "Adicionar ao Carrinho" */
+.add-to-cart {
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart:hover {
+  background-color: #ff5500;
+  transform: scale(1.05);
+}
+
+.add-to-cart:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+
+/* Estilos do formulário de finalizar pedido */
+.checkout {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+}
+
+.checkout h2 {
+  margin-bottom: 10px;
+}
+
+#checkout-total-price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#full-name,
+#delivery-address,
+#delivery-date {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+#delivery-address {
+  width: calc(100% - 120px); /* Ajusta a largura do campo para acomodar o botão de endereço */
+}
+
+.payment-details {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.payment-details h3 {
+  margin-bottom: 10px;
+}
+
+.qr-code img {
+  max-width: 100%;
+}
+
+/* Estilos do carrinho */
+.cart {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart h2 {
+  margin-bottom: 10px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#cart-items li button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#cart-items li button:hover {
+  background-color: #cc0000;
+}
+
+#total-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#checkout-button {
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+}
+
+#checkout-button:hover {
+  background-color: #ff5500;
+}
+
+#delivery-form {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#delivery-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#delivery-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#delivery-form input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#delivery-form input[type="text"]:placeholder-shown {
+  color: #aaa;
+}
+
+#delivery-form label[for="delivery-bairro"]::before,
+#delivery-form label[for="delivery-numero"]::before {
+  content: "* ";
+  color: red;
+}
+
+#delivery-form input[type="text"][required] {
+  border-color: red;
+}
+
+#delivery-form input[type="text"][required]:focus {
+  border-color: red;
+}
+
+#delivery-form input[type="text"][required]:placeholder-shown {
+  color: red;
+}
